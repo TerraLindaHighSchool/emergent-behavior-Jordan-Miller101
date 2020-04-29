@@ -21,19 +21,18 @@ public class Ant extends Creature
      */
     public void act()
     {
-        testFoodPile(); // This currently does not do anything
+        randomWalk();
+        testFoodPile(); 
     }
-    
+     
     private void testFoodPile()
     {
-    
-    /*****************************************************************
         Food food = (Food) getOneIntersectingObject(Food.class);
+        
         if (food != null) 
         {
             food.removeCrumb();
         }
-    *****************************************************************/
     
     }
 }

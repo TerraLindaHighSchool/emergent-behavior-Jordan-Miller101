@@ -12,7 +12,7 @@ public class Bird extends Animal
     // Characteristics shared by all birdes (static fields).
     
     // The age to which a bird can live.
-    private static final int MAX_AGE = 18;
+    private static final int MAX_AGE = 3;
     // The age at which a bird can start to breed.
     private static final int BREEDING_AGE = 5;
     // The likelihood of a bird breeding (in percent).
