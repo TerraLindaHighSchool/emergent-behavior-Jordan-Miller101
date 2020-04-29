@@ -24,7 +24,7 @@ public class Food extends Actor
      */
     public void act() 
     {
-        //do what an ant's gotta do
+        //do what food's gotta do
     } 
     
     private void updateImage()
