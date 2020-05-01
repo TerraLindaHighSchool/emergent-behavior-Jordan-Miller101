@@ -31,7 +31,7 @@ public class Food extends Actor
     {
         Random random = new Random();
         
-        for(var i = 0; i < crumbs; i++)
+        for(int i = 0; i < crumbs; i++)
         {   
             int stDev = size/6;
             int x = (int) (stDev * random.nextGaussian() + 3 * stDev);

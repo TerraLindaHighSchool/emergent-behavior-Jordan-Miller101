@@ -47,5 +47,13 @@ public class AntWorld extends World
         food3.setLocation(243,497);
         removeObject(food3);
         removeObject(food2);
+        Food food6 = new Food();
+        addObject(food6,475,335);
+        Food food7 = new Food();
+        addObject(food7,185,119);
+        Food food8 = new Food();
+        addObject(food8,368,516);
+        Food food9 = new Food();
+        addObject(food9,113,341);
     }
 }

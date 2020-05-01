@@ -4,7 +4,7 @@ import greenfoot.*;
  * An ant that collects food.
  * 
  * @author Michael Kölling and Jordan Miller
- * @version 0.2
+ * @version 0.3
  */
 public class Ant extends Creature
 {
@@ -62,7 +62,7 @@ public class Ant extends Creature
     
     private void status()
     {
-        if(carryingFood = true)
+        if(carryingFood)
         {
             walkTowardsHome();
             
@@ -74,7 +74,7 @@ public class Ant extends Creature
             }
         }
         
-        if(carryingFood = false)
+        if(!carryingFood)
         {
             searchForFood();
         }
