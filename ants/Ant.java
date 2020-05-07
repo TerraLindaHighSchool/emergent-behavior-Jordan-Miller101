@@ -84,5 +84,18 @@ public class Ant extends Creature
         }
     }
     
-   
+     private void handlePheromoneDrop()
+    {
+        
+    }
+    
+    private boolean smellPheromone()
+    {
+
+    }
+    
+    private void walkTowardsPheromoneCenter()
+    {
+    
+    }
 }
