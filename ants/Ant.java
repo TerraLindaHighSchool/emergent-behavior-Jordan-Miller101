@@ -5,7 +5,7 @@ import java.util.List;
  * An ant that collects food.
  * 
  * @author Michael Kölling and Jordan Miller
- * @version 0.4
+ * @version 0.5
  */
 public class Ant extends Creature
 {
@@ -65,8 +65,7 @@ public class Ant extends Creature
         {
             if(smellPheromone()) 
             {
-               Pheromone pheromone = (Pheromone) getOneIntersectingObject(Pheromone.class);
-               headTowards(pheromone);
+               walkTowardsPheromoneCenter();
             }
             else
             {
@@ -96,8 +95,7 @@ public class Ant extends Creature
                 getHomeHill().countFood();
             }
         }
-        
-        if(!carryingFood)
+        else
         {
             searchForFood();
         }
@@ -118,25 +116,17 @@ public class Ant extends Creature
     
     private boolean smellPheromone()
     {
-        if(isTouching(Pheromone.class))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return isTouching(Pheromone.class);
     }
     
     private void walkTowardsPheromoneCenter()
     {
         Pheromone pheromone = (Pheromone) getOneIntersectingObject(Pheromone.class);
-        Pheromone center = (Pheromone) getWorld().getObjectsAt(pheromone.getX(), pheromone.getY(), Ant.class);
         
         if(pheromone != null)
         {
             headTowards(pheromone);
-            if(center != null)
+            if(pheromone.getX() == getX() && pheromone.getY() == getY())
             {
                 followTrailTimeRemaining = TIME_FOLLOWING_TRAIL;
             }

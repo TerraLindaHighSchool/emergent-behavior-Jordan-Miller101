@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Creates the appearance of fading away pheromones left by the ants.
  * 
  * @author Jordan Miller
- * @version 5/6/20
+ * @version 5/8/20
  */
 public class Pheromone extends Actor
 {
@@ -15,6 +15,7 @@ public class Pheromone extends Actor
     public Pheromone()
     {
         intensity = MAX_INTENSITY;
+        updateImage();
     }
     
     /**
@@ -43,7 +44,7 @@ public class Pheromone extends Actor
         int size = intensity / 3 + 5;
         image = new GreenfootImage(size, size + 1 * size + 1);
         
-        image.setColor(new Color(0, 0, 0, intensity / 3));
+        image.setColor(new Color(255, 255, 255, intensity / 3));
         image.fillOval(0, 0, size, size);
         
         image.setColor(new Color(149, 149, 149));

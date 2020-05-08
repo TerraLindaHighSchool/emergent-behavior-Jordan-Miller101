@@ -5,7 +5,7 @@ import java.util.Random;
  * Places and removes crumbs, which are food for the ants.
  * 
  * @author Jordan Miller
- * @version 4.28.20
+ * @version 5/8/20
  */
 public class Food extends Actor
 {
@@ -16,6 +16,7 @@ public class Food extends Actor
     public Food()
     {
         image = new GreenfootImage(size, size);
+        updateImage();
     }
     
     /**

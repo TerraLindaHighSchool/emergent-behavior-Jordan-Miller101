@@ -4,8 +4,8 @@ import java.util.List;
 /**
  * The world where ants live.
  * 
- * @author Michael Kölling
- * @version 0.1
+ * @author Michael Kölling  
+ * @version 0.2
  */
 public class AntWorld extends World
 {
@@ -27,7 +27,7 @@ public class AntWorld extends World
         List<Food> foods = getObjects(Food.class);
         List<Pheromone> pheromones = getObjects(Pheromone.class);
         
-        if(foods == null && pheromones == null)
+        if(foods.size() == 0 && pheromones.size() == 0)
         {
             Greenfoot.stop();
         }
@@ -44,28 +44,10 @@ public class AntWorld extends World
         AntHill secondAntHill = new AntHill();
         addObject(secondAntHill, 420, 410);
         Food food = new Food();
-        addObject(food,450,178);
+        addObject(food,419,149);
         Food food2 = new Food();
-        addObject(food2,105,327);
+        addObject(food2,155,341);
         Food food3 = new Food();
-        addObject(food3,241,494);
-        Food food4 = new Food();
-        addObject(food4,557,546);
-        Food food5 = new Food();
-        addObject(food5,218,77);
-        removeObject(food5);
-        removeObject(food);
-        removeObject(food4);
-        food3.setLocation(243,497);
-        removeObject(food3);
-        removeObject(food2);
-        Food food6 = new Food();
-        addObject(food6,475,335);
-        Food food7 = new Food();
-        addObject(food7,185,119);
-        Food food8 = new Food();
-        addObject(food8,368,516);
-        Food food9 = new Food();
-        addObject(food9,113,341);
+        addObject(food3,218,543);
     }
 }
