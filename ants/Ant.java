@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.util.List;
 
 /**
  * An ant that collects food.
@@ -64,8 +65,8 @@ public class Ant extends Creature
         {
             if(smellPheromone()) 
             {
-                Pheromone pheromone = new Pheromone();
-                headTowards(pheromone);
+               Pheromone pheromone = (Pheromone) getOneIntersectingObject(Pheromone.class);
+               headTowards(pheromone);
             }
             else
             {
@@ -129,8 +130,16 @@ public class Ant extends Creature
     
     private void walkTowardsPheromoneCenter()
     {
+        Pheromone pheromone = (Pheromone) getOneIntersectingObject(Pheromone.class);
+        Pheromone center = (Pheromone) getWorld().getObjectsAt(pheromone.getX(), pheromone.getY(), Ant.class);
         
-        
-        
+        if(pheromone != null)
+        {
+            headTowards(pheromone);
+            if(center != null)
+            {
+                followTrailTimeRemaining = TIME_FOLLOWING_TRAIL;
+            }
+        }
     }
 }

@@ -24,6 +24,7 @@ public class Pheromone extends Actor
     public void act() 
     {
         intensity--;
+        
         if(intensity <= 0)
         {
             getWorld().removeObject(this);
