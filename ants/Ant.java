@@ -5,7 +5,7 @@ import java.util.List;
  * An ant that collects food.
  * 
  * @author Michael Kölling and Jordan Miller
- * @version 0.3
+ * @version 0.4
  */
 public class Ant extends Creature
 {
